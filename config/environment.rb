@@ -30,7 +30,11 @@ Rails::Initializer.run do |config|
   # Use the database for sessions instead of the file system
   # (create the session table with 'rake create_sessions_table')
   # config.action_controller.session_store = :active_record_store
-  config.action_controller.session_store = :PStore
+  config.action_controller.session = {
+    :session_key => '_dramatis_session',
+    :secret      => '0919cc9d507cca5fff2afe340520d7870cb24b7683aac1e6367cfe69a2d2c455e6bfb5ed7fe86531aef5d0edb28e691aedf39aa52127e5cd47a5a9b0f502630c'
+  }
+  # config.action_controller.session_store = :PStore
 
   # Enable page/fragment caching by setting a file-based store
   # (remember to create the caching directory and make it readable to the application)
