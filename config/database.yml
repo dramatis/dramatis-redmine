@@ -1,0 +1,13 @@
+development:
+  adapter: mysql
+  database: dramatis
+  host: localhost
+  username: dramatis
+  password: willy
+
+production:
+  adapter: mysql
+  database: dramatis
+  host: localhost
+  username: dramatis
+  password: willy

@@ -53,10 +53,7 @@ Rails::Initializer.run do |config|
 	config.action_mailer.smtp_settings = {
 		:address => "127.0.0.1",
 		:port => 25,
-		:domain => "somenet.foo",
-		:authentication => :login,
-		:user_name => "redmine@somenet.foo",
-		:password => "redmine",
+		:domain => "dramatis.mischance.net"
 	}
 	
 	config.action_mailer.perform_deliveries = true
