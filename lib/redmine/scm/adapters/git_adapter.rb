@@ -104,9 +104,16 @@ module Redmine
           return nil
         end
         
+        # HACKED FOR dramatis
+        def dramatis_pull
+          cmd = "( cd github; git pull --rebase )"
+          shellout(cmd)
+        end
+
         def entries(path=nil, identifier=nil)
           path ||= ''
           entries = Entries.new
+          dramatis_pull
           cmd = "#{GIT_BIN} --git-dir #{target('')} ls-tree -l "
           cmd << shell_quote("HEAD:" + path) if identifier.nil?
           cmd << shell_quote(identifier + ":" + path) if identifier
